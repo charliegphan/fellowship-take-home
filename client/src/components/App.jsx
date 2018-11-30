@@ -18,7 +18,7 @@ class App extends Component {
     ).then((response) => {
       this.setState({
         investmentData: response.data,
-      });
+      }, console.log(response.data));
     }).catch((error) => {
       console.log(error);
     });

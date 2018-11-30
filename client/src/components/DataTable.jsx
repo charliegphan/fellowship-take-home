@@ -17,7 +17,10 @@ const DataTable = ({ investmentData }) => {
     </tbody>
   </table>
   {investmentData.map(investment => (
-    <Company investment={investment} />
+    <Company 
+      investment={investment}
+      key={investment.name}
+    />
   ))}
     </div>
   );
