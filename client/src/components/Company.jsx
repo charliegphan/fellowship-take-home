@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Company = ({ investment }) => (
   <table>
@@ -10,8 +11,6 @@ const Company = ({ investment }) => (
         <th>{investment.quantity}</th>
         <th>{investment.cost.$}</th>
       </tr>
-
-
     </tbody>
   </table>
 
@@ -19,3 +18,6 @@ const Company = ({ investment }) => (
 
 export default Company;
 
+Company.defaultProps = {
+  investment: [],
+};
