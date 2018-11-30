@@ -1,0 +1,22 @@
+{
+  "name": "fellowship-take-home",
+  "version": "1.0.0",
+  "description": "Take home challenge for Carta Fellowship.",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliegphan/fellowship-take-home.git"
+  },
+  "author": "Charlie Phan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliegphan/fellowship-take-home/issues"
+  },
+  "homepage": "https://github.com/charliegphan/fellowship-take-home#readme"
+}
