@@ -1,29 +1,26 @@
 import React from 'react';
 
+import Company from './Company.jsx';
+
 const DataTable = ({ investmentData }) => {
   return (
+    <div>
     <table>
-      <tbody>
-        <tr>
-          <th>Investment</th>
-          <th>Asset</th>
-          <th>Investment date</th>
-          <th>Shares</th>
-          <th>Cost</th>
-        </tr>
-        {investmentData.map()}
-      </tbody>
-   </table>
-  )
+    <tbody>
+      <tr>
+        <th>Investment</th>
+        <th>Asset</th>
+        <th>Investment date</th>
+        <th>Shares</th>
+        <th>Cost</th>
+      </tr>
+    </tbody>
+  </table>
+  {investmentData.map(investment => (
+    <Company investment={investment} />
+  ))}
+    </div>
+  );
 };
 
-export default DataTable
-
-// <tr>
-// <td>
-//   hello2
-//   </td>
-// <td>hello3</td>
-// <td>hello4</td>
-// <td>hello5</td>
-// </tr>
+export default DataTable;
