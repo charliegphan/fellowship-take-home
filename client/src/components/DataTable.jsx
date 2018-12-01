@@ -24,6 +24,6 @@ const DataTable = ({ investmentData }) => (
   </div>
 );
 
-// TODO
+// TODO PROPTYPES
 
 export default DataTable;
