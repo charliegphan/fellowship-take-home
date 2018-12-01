@@ -1,18 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IssuedAsset from './IssuedAssets.jsx';
-import TotalCost from './TotalCost.jsx';
+import Header from './Header.jsx';
 
-const Company = ({ investment }) => (
+const Company = ({ investment, totalCost }) => (
   <table>
     <tbody>
-      <tr>
-        <th>{investment.name}</th>
-        <th />
-        <th />
-        <th>{investment.quantity}</th>
-        <th>{investment.cost.$}</th>
-      </tr>
+      <Header investment={investment} />
       {investment.issued_assets.map(issuedAsset => <IssuedAsset issuedAsset={issuedAsset} />)}
     </tbody>
   </table>

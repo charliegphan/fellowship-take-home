@@ -2,7 +2,7 @@ import React from 'react';
 
 const TotalCost = ({ totalCost }) => (
   <tr>
-    <th />
+    <th>Total Cost</th>
     <th />
     <th />
     <th />

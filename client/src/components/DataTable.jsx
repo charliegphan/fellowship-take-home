@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Company from './Company.jsx';
+import TotalCost from './TotalCost.jsx';
 
-const DataTable = ({ investmentData }) => (
+const DataTable = ({ investmentData, totalCost }) => (
   <div>
     <table>
       <tbody>
@@ -15,12 +16,15 @@ const DataTable = ({ investmentData }) => (
         </tr>
       </tbody>
     </table>
+
     {investmentData.map(investment => (
       <Company
         investment={investment}
         key={investment.name}
       />
     ))}
+
+    <TotalCost totalCost={totalCost} />
   </div>
 );
 
