@@ -3,9 +3,11 @@ import React from 'react';
 import Company from './Company.jsx';
 import TotalCost from './TotalCost.jsx';
 
+import styles from '../../../styles/DataTable.css';
+
 const DataTable = ({ investmentData, totalCost }) => (
   <div>
-    <table>
+    <table className={styles.header}>
       <tbody>
         <tr>
           <th>Investment</th>
