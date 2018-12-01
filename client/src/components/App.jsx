@@ -3,12 +3,15 @@ import axios from 'axios';
 
 import DataTable from './DataTable.jsx';
 
+import totalCost from '../../../helpers/totalCost.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       investmentData: [],
+      totalCost: 0,
     };
   }
 
@@ -18,14 +21,15 @@ class App extends Component {
     ).then((response) => {
       this.setState({
         investmentData: response.data,
-      }, console.log(response.data));
+        totalCost: totalCost(response.data),
+      });
     }).catch((error) => {
       console.log(error);
     });
   }
 
   render() {
-    const { investmentData } = this.state;
+    const { investmentData, totalCost } = this.state;
     return (
       <div>
         <p>Krakatoa Venture Fund I, LP</p>

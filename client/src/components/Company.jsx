@@ -18,8 +18,12 @@ const Company = ({ investment }) => (
 
 );
 
-export default Company;
-
 Company.defaultProps = {
   investment: [],
 };
+
+// Company.PropTypes = {
+//   investment: 
+// };
+
+export default Company;
