@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import toDashedDate from '../../../helpers/toDashedDate.js';
 
@@ -18,6 +19,22 @@ const IssuedAssets = ({ issuedAsset }) => {
     </tr>
   );
 };
+
+IssuedAssets.defaultProps = {
+  issuedAsset: {},
+};
+
+IssuedAssets.propTypes = {
+  issuedAsset: PropTypes.shape({
+    asset_class: PropTypes.string,
+    cost: PropTypes.shape({
+      $: PropTypes.number,
+    }),
+    id: PropTypes.number,
+    investment_date: PropTypes.string,
+    quantity: PropTypes.number,
+  }),
+}
 
 
 export default IssuedAssets;
