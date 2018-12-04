@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node server/server.js",
     "build": "webpack --config webpack.config.js --watch",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -44,5 +45,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "style-loader": "^0.23.1"
+  },
+  "engines": {
+    "node": "10.13.0"
   }
 }
