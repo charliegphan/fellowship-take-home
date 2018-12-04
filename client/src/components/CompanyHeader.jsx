@@ -11,4 +11,7 @@ const Header = ({ investment }) => (
   </tr>
 );
 
+Header.defaultProps = {};
+Header.propTypes = {};
+
 export default Header;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IssuedAsset from './IssuedAssets.jsx';
-import Header from './Header.jsx';
+import CompanyHeader from './CompanyHeader.jsx';
 
 import styles from '../../../styles/Company.css'
 
@@ -9,7 +9,7 @@ const Company = ({ investment, totalCost }) => (
   <div className={styles.container}>
     <table className={styles.company}>
       <tbody>
-        <Header investment={investment} />
+        <CompanyHeader investment={investment} />
         {investment.issued_assets.map(issuedAsset => <IssuedAsset issuedAsset={issuedAsset} />)}
       </tbody>
     </table>

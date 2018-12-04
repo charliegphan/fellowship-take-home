@@ -3,22 +3,11 @@ import PropTypes from 'prop-types';
 
 import Company from './Company.jsx';
 import TotalCost from './TotalCost.jsx';
-
-import styles from '../../../styles/DataTable.css';
+import TableHeader from './TableHeader.jsx';
 
 const DataTable = ({ investmentData, totalCost }) => (
   <div>
-    <table className={styles.header}>
-      <tbody>
-        <tr>
-          <th>Investment</th>
-          <th>Asset</th>
-          <th>Investment date</th>
-          <th>Shares</th>
-          <th>Cost</th>
-        </tr>
-      </tbody>
-    </table>
+    <TableHeader />
 
     {investmentData.map(investment => (
       <Company
@@ -33,6 +22,7 @@ const DataTable = ({ investmentData, totalCost }) => (
 
 DataTable.defaultProps = {
   investmentData: [],
+  totalCost: 0,
 };
 
 DataTable.propTypes = {
@@ -59,6 +49,7 @@ DataTable.propTypes = {
       }),
     }),
   ),
+  totalCost: PropTypes.number,
 };
 // TODO PROPTYPES
 
