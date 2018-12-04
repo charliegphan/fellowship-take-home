@@ -10,7 +10,7 @@ class Company extends React.Component {
     super(props);
 
     this.state = {
-      showAssets: false,
+      showAssets: true,
     };
   }
 

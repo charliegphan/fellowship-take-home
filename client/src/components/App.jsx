@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import DataTable from './DataTable.jsx';
 import Description from './Description.jsx';
+import DatePicker from './DatePicker.jsx';
 
 import addTotalCost from '../../../helpers/totalCost.js';
 
@@ -16,6 +17,8 @@ class App extends Component {
       investmentData: [],
       totalCost: 0,
     };
+
+    this.handleDatePick = this.handleDatePick.bind(this);
   }
 
   componentDidMount() {
@@ -31,11 +34,18 @@ class App extends Component {
     });
   }
 
+  handleDatePick(date) {
+    window.location.search = `date=${date}`;
+  };
+
   render() {
     const { investmentData, totalCost } = this.state;
     return (
       <div className={styles.container}>
         <Description />
+        <DatePicker 
+          handleDatePick={this.handleDatePick}
+        />
         <DataTable
           investmentData={investmentData}
           totalCost={totalCost}
