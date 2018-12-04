@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = ({ investment }) => (
+const CompanyHeader = ({ investment }) => (
   <tr>
     <th>{investment.name}</th>
     <th />
@@ -11,7 +11,32 @@ const Header = ({ investment }) => (
   </tr>
 );
 
-Header.defaultProps = {};
-Header.propTypes = {};
+CompanyHeader.defaultProps = {
+  investment: {},
+};
 
-export default Header;
+CompanyHeader.propTypes = {
+  investment: PropTypes.shape({
+    investment: PropTypes.shape({
+      cost: PropTypes.shape({
+        $: PropTypes.number,
+      }),
+      id: PropTypes.number,
+      issued_assets: PropTypes.arrayOf(
+        PropTypes.shape({
+          asset_class: PropTypes.string,
+          cost: PropTypes.shape({
+            $: PropTypes.number,
+          }),
+          id: PropTypes.number,
+          investment_date: PropTypes.string,
+          quantity: PropTypes.number,
+        }),
+      ),
+      name: PropTypes.string,
+      quantity: PropTypes.number,
+    }),
+  }),
+};
+
+export default CompanyHeader;
