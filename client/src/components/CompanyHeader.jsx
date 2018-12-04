@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../../styles/CompanyHeader.css';
+
 const CompanyHeader = ({ investment }) => (
-  <tr>
+  <tr className={styles.header}>
     <th>{investment.name}</th>
     <th />
     <th />
