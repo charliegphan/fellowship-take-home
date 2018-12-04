@@ -51,6 +51,5 @@ DataTable.propTypes = {
   ),
   totalCost: PropTypes.number,
 };
-// TODO PROPTYPES
 
 export default DataTable;

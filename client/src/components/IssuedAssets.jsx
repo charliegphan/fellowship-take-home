@@ -15,7 +15,7 @@ const IssuedAssets = ({ issuedAsset }) => {
       <td>{issuedAsset.asset_class}</td>
       <td>{toDashedDate(issuedAsset.investment_date)}</td>
       <td>{quantity}</td>
-      <td>{`${issuedAsset.cost.$.toLocaleString(undefined, { minimumFractionDigits: 2 })} $`}</td>
+      <td>{`$ ${issuedAsset.cost.$.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}</td>
     </tr>
   );
 };
@@ -34,7 +34,7 @@ IssuedAssets.propTypes = {
     investment_date: PropTypes.string,
     quantity: PropTypes.number,
   }),
-}
+};
 
 
 export default IssuedAssets;

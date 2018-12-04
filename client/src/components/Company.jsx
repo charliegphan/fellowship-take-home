@@ -3,14 +3,19 @@ import PropTypes from 'prop-types';
 import IssuedAsset from './IssuedAssets.jsx';
 import CompanyHeader from './CompanyHeader.jsx';
 
-import styles from '../../../styles/Company.css'
+import styles from '../../../styles/Company.css';
 
-const Company = ({ investment, totalCost }) => (
+const Company = ({ investment }) => (
   <div className={styles.container}>
     <table className={styles.company}>
       <tbody>
         <CompanyHeader investment={investment} />
-        {investment.issued_assets.map(issuedAsset => <IssuedAsset issuedAsset={issuedAsset} />)}
+        {investment.issued_assets.map(issuedAsset => (
+          <IssuedAsset
+            issuedAsset={issuedAsset}
+            key={issuedAsset.id}
+          />
+        ))}
       </tbody>
     </table>
   </div>

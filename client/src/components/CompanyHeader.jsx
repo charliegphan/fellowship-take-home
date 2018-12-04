@@ -7,7 +7,7 @@ const Header = ({ investment }) => (
     <th />
     <th />
     <th>{investment.quantity.toLocaleString()}</th>
-    <th>{`${investment.cost.$.toLocaleString(undefined, { minimumFractionDigits: 2 })} $`}</th>
+    <th>{`$ ${investment.cost.$.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}</th>
   </tr>
 );
 
