@@ -1,5 +1,10 @@
-# fellowship-take-home
+# Schedule of Investments Front End Challenge
 Take home challenge for the Carta Fellowship.
+
+## Tech Stack
+- React
+- Node
+- Express
 
 ### Installing Dependencies
 
@@ -20,3 +25,5 @@ npm start
 ```sh
 npm run build
 ```
+
+Open [http://localhost:8080/](http://localhost:8080/) to see your app, refresh for changes.
