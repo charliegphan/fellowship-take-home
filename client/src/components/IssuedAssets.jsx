@@ -9,7 +9,7 @@ const IssuedAssets = ({ issuedAsset }) => {
     quantity = issuedAsset.quantity.toLocaleString();
   }
   return (
-    <tr className={styles.row}>
+    <tr>
       <td />
       <td>{issuedAsset.asset_class}</td>
       <td>{toDashedDate(issuedAsset.investment_date)}</td>
