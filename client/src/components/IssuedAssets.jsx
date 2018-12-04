@@ -8,7 +8,7 @@ const IssuedAssets = ({ issuedAsset }) => (
     <td>{issuedAsset.asset_class}</td>
     <td>{toDashedDate(issuedAsset.investment_date)}</td>
     <td>{issuedAsset.quantity}</td>
-    <td>{issuedAsset.cost.$}</td>
+    <td>{`${issuedAsset.cost.$}.00 $`}</td>
   </tr>
 );
 

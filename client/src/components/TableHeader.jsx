@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../../styles/DataTable.css';
+import styles from '../../../styles/TableHeader.css';
 
 const TableHeader = () => (
   <div>
