@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from '../../../styles/DatePicker.css';
 
@@ -11,5 +12,13 @@ const DatePicker = ({ handleDatePick }) => (
     />
   </div>
 );
+
+DatePicker.defaultProps = {
+  handleDatePick: () => {},
+};
+
+DatePicker.propTypes = {
+  handleDatePick: PropTypes.func,
+};
 
 export default DatePicker;
