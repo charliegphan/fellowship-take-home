@@ -5,21 +5,46 @@ import CompanyHeader from './CompanyHeader.jsx';
 
 import styles from '../../../styles/Company.css';
 
-const Company = ({ investment }) => (
-  <div className={styles.container}>
-    <table className={styles.company}>
-      <tbody>
-        <CompanyHeader investment={investment} />
-        {investment.issued_assets.map(issuedAsset => (
-          <IssuedAsset
-            issuedAsset={issuedAsset}
-            key={issuedAsset.id}
-          />
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+class Company extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAssets: false,
+    };
+  }
+
+  render() {
+    const { investment } = this.props;
+    const { showAssets } = this.state;
+
+    let assets;
+    let style;
+    if (showAssets) {
+      assets = investment.issued_assets.map(issuedAsset => (
+        <IssuedAsset
+          issuedAsset={issuedAsset}
+          key={issuedAsset.id}
+        />
+      ));
+      style = styles.companyExpanded;
+    } else {
+      style = styles.companyCollapsed;
+    }
+
+
+    return (
+      <div className={styles.container}>
+        <table className={style}>
+          <tbody>
+            <CompanyHeader investment={investment} />
+            {assets}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
 
 Company.propTypes = {
   investment: PropTypes.shape({

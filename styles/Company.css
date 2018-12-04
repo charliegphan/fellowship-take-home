@@ -1,14 +1,17 @@
-.company {
+.companyExpanded {
   width: 100%;
-  margin-bottom: 50px;
-  border-collapse: separate;
+  margin-bottom: 30px;
+}
+
+.companyCollapsed {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .container {
   border: 1px solid lightgray;
   box-shadow: 0 0 2px 2px lightgray;
-  /* border-radius: 10px; */
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .container:hover {

@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 import toDashedDate from '../../../helpers/toDashedDate.js';
 
+import styles from '../../../styles/IssuedAssets.css';
+
 const IssuedAssets = ({ issuedAsset }) => {
   let quantity;
   if (issuedAsset.quantity) {
     quantity = issuedAsset.quantity.toLocaleString();
   }
-
   return (
-    <tr>
+    <tr className={styles.row}>
       <td />
       <td>{issuedAsset.asset_class}</td>
       <td>{toDashedDate(issuedAsset.investment_date)}</td>
