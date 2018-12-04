@@ -14,6 +14,13 @@ class Company extends React.Component {
     };
   }
 
+  handleExpand() {
+    const { showAssets } = this.state;
+    this.setState({
+      showAssets: !showAssets,
+    });
+  }
+
   render() {
     const { investment } = this.props;
     const { showAssets } = this.state;
@@ -32,9 +39,11 @@ class Company extends React.Component {
       style = styles.companyCollapsed;
     }
 
-
     return (
-      <div className={styles.container}>
+      <div 
+        className={styles.container}
+        onClick={() => this.handleExpand()}
+        >
         <table className={style}>
           <tbody>
             <CompanyHeader investment={investment} />
