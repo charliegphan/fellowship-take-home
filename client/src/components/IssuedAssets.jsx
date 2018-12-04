@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import toDashedDate from '../../../helpers/toDashedDate.js';
 
-import styles from '../../../styles/IssuedAssets.css';
-
 const IssuedAssets = ({ issuedAsset }) => {
   let quantity;
   if (issuedAsset.quantity) {

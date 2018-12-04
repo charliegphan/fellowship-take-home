@@ -25,5 +25,9 @@ npm start
 ```sh
 npm run build
 ```
+### Usage
+- Clicking on each company expand and collapses
+- Changing the date will reload the table and append the date the url
+
 
 Open [http://localhost:8080/](http://localhost:8080/) to see your app, refresh for changes.
