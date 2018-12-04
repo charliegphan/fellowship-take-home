@@ -16,12 +16,30 @@ const Company = ({ investment, totalCost }) => (
   </div>
 );
 
+Company.propTypes = {
+  investment: PropTypes.shape({
+    cost: PropTypes.shape({
+      $: PropTypes.number,
+    }),
+    id: PropTypes.number,
+    issued_assets: PropTypes.arrayOf(
+      PropTypes.shape({
+        asset_class: PropTypes.string,
+        cost: PropTypes.shape({
+          $: PropTypes.number,
+        }),
+        id: PropTypes.number,
+        investment_date: PropTypes.string,
+        quantity: PropTypes.number,
+      }),
+    ),
+    name: PropTypes.string,
+    quantity: PropTypes.number,
+  }),
+};
+
 Company.defaultProps = {
   investment: [],
 };
-
-// Company.PropTypes = {
-//   investment: 
-// };
 
 export default Company;

@@ -1,5 +1,3 @@
-const toDashedDate = (date) => {
-  return date.split('/').join(' - ');
-};
+const toDashedDate = date => date.split('/').join(' - ');
 
 export default toDashedDate;
